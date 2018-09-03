@@ -1,0 +1,35 @@
+.catalog-thumbnail {
+	display: block;
+	padding: 20px 19px;
+	background-color: #fff;
+}
+.catalog-thumbnail__img {
+	display: block;
+	margin: 0 0 10px 0;
+	height: 140px;
+	@include bg-contain;
+}
+.catalog-thumbnail__name {
+	margin: 0 0 35px 0;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: #0e69c8;
+}
+.catalog-thumbnail__controls {
+	@include flex-row(nowrap, space-between, center);
+}
+.catalog-thumbnail__price {
+	font-size: 22px;
+	margin: 0 15px 0 0;
+	color: $color_main;
+	font-weight: 400;
+}
+
+// @media screen and (max-width: 1400px) {
+// 	.catalog-thumbnail__controls {
+// 		.catalog-thumbnail__price,
+// 		.btn {
+// 			flex: 1 1 100%;
+// 		}
+// 	}
+// }

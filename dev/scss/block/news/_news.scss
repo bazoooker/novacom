@@ -1,0 +1,4 @@
+.news {
+	@include flex-row(nowrap, flex-start, stretch);
+	margin: 0 -19px 30px -19px;
+}
