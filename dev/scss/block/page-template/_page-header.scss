@@ -66,13 +66,13 @@
 
 
 .page-header__bottom-bar {
-	
+	position: relative;
 	height: 5.5rem;
 	background-color: #1d70be;
 	background-image: url(/img/bg/bg-topbar.jpg);
 	@include bg-cover;
 
-	.container {
+	&>.container {
 		@include flex-row(nowrap, space-between, center);
 		height: 100%;
 	}

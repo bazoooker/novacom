@@ -11,6 +11,36 @@
 
 		.logo {
 			background-image: url(/img/logo-white.png);
+			flex: 0 1 275px;
+    		margin: 0;
+		}
+
+		p {
+			color: #fff;
+			font-weight: 200;
+			font-size: 15px;
+			line-height: 150%;
+			letter-spacing: .3px;
+		}
+
+		.location {
+			.location__city,
+			.location__additional {
+				color: #fff;
+				opacity: .85;
+			}
+
+			.location__city {
+				&::after {
+					display: none;
+					border-bottom: 2px solid #fff;
+					border-right: 2px solid #fff;
+				}
+			}
+		}
+
+		.phone {
+			color: #fff;
 		}
 	}
 

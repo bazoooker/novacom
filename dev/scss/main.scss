@@ -58,6 +58,19 @@
 @import "block/brand-holder/brand-holder";
 
 
+// e-shop
+
+@import "block/e-shop/product-list-controls/product-list-controls";
+@import "block/e-shop/view/view";
+@import "block/e-shop/sort/sort";
+@import "block/e-shop/count/count";
+
+@import "block/e-shop/filters/filters";
+@import "block/e-shop/filter-category/filter-category";
+
+@import "block/e-shop/product/product";
+@import "block/e-shop/counter/counter";
+
 
 @import "block/catalog-list/catalog-list";
 @import "block/catalog-link/catalog-link";
@@ -76,11 +89,12 @@
 
 // products
 @import "block/product-list/product-list";
-@import "block/product/product";
-@import "block/quantity-counter/quantity-counter";
+// @import "block/quantity-counter/quantity-counter";
 
 // product-detail
-@import "block/product-detail/product-detail";
+@import "block/e-shop/product-detail/product-detail";
+@import "block/e-shop/product-detail-heading/product-detail-heading";
+@import "block/e-shop/product-detail-heading/product-detail-heading";
 
 
 
@@ -120,6 +134,10 @@
 // video
 // @import "block/video-link";
 // @import "block/grtyoutube-popup";
+
+// checkboxes
+@import "block/fancy-checkbox/fancy-checkbox";
+@import "block/ad/ad";
 
 
 

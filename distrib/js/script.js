@@ -2,6 +2,30 @@
   $('select').niceSelect();
 });
 
+
+// главное меню дропдаун
+$(document).ready(function(){
+
+    $('.js-show-main-dropdown-menu, .catalog-list_dropdown-menu').hover(function() {
+
+        var dropdownIsClosed = ( !$('.catalog-list_dropdown-menu').hasClass('catalog-list_active') );    
+
+
+        if(dropdownIsClosed) {
+            $('.catalog-list_dropdown-menu').addClass('catalog-list_active');
+            $('.js-show-main-dropdown-menu').addClass('btn-burger_active');
+            // $('.js-show-main-dropdown-menu > .btn-burger').addClass('btn-burger_active-arrow');
+
+        } else {
+            $('.catalog-list_dropdown-menu').removeClass('catalog-list_active');
+            $('.js-show-main-dropdown-menu').removeClass('btn-burger_active');
+            // $('.js-show-main-dropdown-menu > .btn-burger').removeClass('btn-burger_active-arrow');
+        }
+    });
+}); 
+
+
+
 //новости с ленивой загрузкой
 
 $(document).ready(function(){ 
@@ -228,6 +252,9 @@ $(document).ready(function(){
     });
 
 
+
+
+
     /* МОДАЛЬНЫЕ ОКНА */
 $(document).ready(function(){        
     $(".callback-link").on('click', function(){
@@ -402,7 +429,15 @@ function paint_dom(content, li_name, number, name_home_dom='section-tabs__tabs')
 
 
 
-
+function opeFilterCategory() {
+    if( $(this).parent().hasClass('filter-category_opened') ) {
+        $(this).parent().find('.filter-category__content').slideUp(200);        
+        $(this).parent().removeClass('filter-category_opened');        
+    } else {
+        $(this).parent().find('.filter-category__content').slideDown(200);        
+        $(this).parent().addClass('filter-category_opened');        
+    }
+}; 
 
 
 $(document).ready(function () {
@@ -585,10 +620,10 @@ $(document).ready(function() {
     $('.js-menu-close').click(openMenu);
     // $('.menu .nav-full .nav-full__list li a').click(openMenu);
     $('.js-scroll-to-top').click(scrollToTop);
+    $('.filter-category__name').click(opeFilterCategory);
 
     // tags
     $('.js-overlay').click(showTags);
-    $('.js-slide-tagcontainer').click(showTags);
 
 
     // $(window).scroll(showStickyHeader);  

@@ -1,0 +1,65 @@
+.view {
+	@include flex-row(nowrap,flex-start,center);
+
+	span {
+		display: inline-block;
+	    font-size: 14px !important;
+	    color: gray;
+	    margin-right: 1rem;
+	}
+}
+
+.view__btn-group {
+	// @include flex-row(nowrap,center,center);
+	border: 1px solid black;
+	margin: 0 0 0 0;
+	font-size: 0;
+	border: 1px solid #efefef;
+}
+
+.view-list {
+	display: inline-block;
+	height: 33px;
+	width: 33px;
+	background: url('/img/icons/i-showtype-list.png') #fff no-repeat 50% 50%;
+	background-size: 15px;
+	border-right: 1px solid #efefef;
+	transition: $tr;
+	&:hover {
+		background: url('/img/icons/i-showtype-list_active.png') #fff no-repeat 50% 50%;
+		background-size: 15px;
+	}
+
+}
+.view-image {
+	display: inline-block;
+	height: 33px;
+	width: 33px;
+	background: url('/img/icons/i-showtype-grid.png') #fff no-repeat 50% 50%;
+	background-size: 15px;
+	transition: $tr;
+	&:hover {
+		background: url('/img/icons/i-showtype-grid_active.png') #fff no-repeat 50% 50%;
+		background-size: 15px;
+	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	.view {
+	    flex: 1 1 45%;
+	    @include flex-row(nowrap,center,center);
+	    margin: 0 0 0 0;
+		align-items: center;
+	    padding: 10px;
+	    background: #efefef;
+	}
+}
+@media screen and (max-width: 568px) {
+	.view {
+		flex: 1 1 100%;
+		margin: 0 0 10px 0;
+
+		background: #e0e0e0;		
+	}
+}

@@ -40,7 +40,7 @@
 
 .btn_outline {
 	background-color: transparent;
-    border: 1px solid #bbcde8;
+    border: 1px solid #bbcde8 !important;
 	color: $color_text;
 	font-weight: 400;
 
@@ -94,7 +94,7 @@
 	    bottom: -8px;
 	    width: 17px;
 	    height: 9px;
-	    background-image: url(/img/icons/i-speech--bubble-source.jpg);
+	    background-image: url(/img/icons/i-speech--bubble-source.png);
 	    background-repeat: no-repeat;
 	    background-position: 50% 50%;
 	    background-size: contain;
@@ -179,35 +179,32 @@ input.btn {
 	&:visited,
 	&:active {color: #fff;}
 
-	&:before {
-		@include pseudo;
-	    right: 0;
-	    top: 48%;
-	    transform: translateY(-50%) rotate(45deg);
-	    width: .6rem;
-	    height: .6rem;
-	    background: transparent;
-	    border-bottom: 2px solid #fff;
-	    border-right: 2px solid #fff;
-	}
+	// &:before {
+	// 	@include pseudo;
+	//     right: 0;
+	//     top: 48%;
+	//     transform: translateY(-50%) rotate(45deg);
+	//     width: .6rem;
+	//     height: .6rem;
+	//     background: transparent;
+	//     border-bottom: 2px solid #fff;
+	//     border-right: 2px solid #fff;
+	// }
 }
 
 .btn-burger {
-    float: left;
+    // float: left;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    // width: 5.5rem;
-    // height: 5rem;
-    // padding: 1.5rem 1.7rem;
     transition: 200ms;
 }
 
 .btn-burger__bar {
-	width: 2.1rem;
-    height: 3px;
-    margin-bottom: .3rem;
+	width: 18px;
+    height: 2px;
+    margin-bottom: 4px;
     background: #fff;
     -webkit-transition: 200ms;
     -o-transition: 200ms;
@@ -216,6 +213,18 @@ input.btn {
     -ms-transform-origin: center, center;
     transform-origin: center, center;
 }
+
+.btn-burger_active {
+	.btn-burger {
+		// animation: move-burger-arrow 150ms ease;
+		transform: rotate(90deg);
+		.btn-burger__bar:first-child {transform: rotate(45deg);}
+		.btn-burger__bar:last-child {transform: rotate(-45deg);}
+		.btn-burger__bar:nth-child(2) {opacity:0;}
+	}
+	
+}
+
 
 .btn-catalog-brand {
 	position: relative;
@@ -287,6 +296,126 @@ input.btn {
     &:hover {
     	background-position: 10px center;
     }
+}
+// .btn_add-to-cart {
+// 	position: relative;
+// 	flex: 1 1 50%;
+// 	max-width: 15rem;
+// 	text-align: center;
+// 	border: 2px solid $color_main;
+// 	padding: .8rem .8rem .8rem 4.5rem;
+	
+// 	text-transform: uppercase;
+// 	color: $color_main;
+
+// 	line-height: 2.2rem;
+
+// 	transition: $tr;
+
+
+// 	&:visited {color: $color_main;}
+// 	&:active {color: $color_main;}
+// 	&:focus {color: $color_main;}
+
+// 	&::before {
+// 		@include pseudo;
+// 		left: 0;
+// 		top: 0;
+// 		height: 100%;
+// 		width: 3.7rem;
+// 		background-color: $color_main;
+// 	}
+
+// 	&::after {
+// 		@include pseudo;
+// 		left: 0;
+// 		top: 0;
+// 		height: 100%;
+// 		width: 3.7rem;
+// 		background-image: url(/img/icons/i-cart.png);
+// 		background-size: 1.7rem;
+// 		background-repeat: no-repeat;
+// 		background-position: 40% 50%;
+
+// 		transition: $tr;
+// 	}
+
+// 	&:hover {
+// 		background-color: $color_main !important;
+// 		color: #fff;
+// 	}
+// }
+
+.btn-group {
+	position: relative;
+	overflow: hidden;
+	height: 38px;
+	padding-right: 40px;
+
+	&.btn-group_cart-counter {
+		border: 2px solid #e85e00;
+    	padding-right: 40px;
+    	width: 145px;
+    	min-width: 145px;
+    	flex: 0 0 145px;
+
+		.counter {
+			width: 100px;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			.counter-minus,
+			.counter-plus {
+				background-color: #fff;
+				&:hover {
+					background-color: #efefef;
+				}
+				&:hover::after,
+				&:hover::before {
+					background-color: black;
+				}
+			}
+
+			.counter-plus {
+				&::before {
+					right: 1.4rem;
+				}
+				&::after {
+					right: 1rem;
+				}
+			}
+
+			.counter-minus {
+				&::after {
+					left: 1rem;
+				}
+			}
+		}
+
+		.btn_add-to-cart {
+			position: absolute;
+			right: 0;
+			top: 0;
+			
+			width: 40px;
+			padding: 0;
+			height: 100%;
+			transition: $tr;
+
+			background: url(/img/icons/i-cart.png) $color_main no-repeat center center;
+			background-size: 1.7rem;
+
+			&::before,
+			&::after {display: none;}
+
+			&:hover {
+				animation: btn-cart-anim .3s ease;
+			}
+		}
+
+	}
 }
 
 @media screen and (max-width: 768px) {

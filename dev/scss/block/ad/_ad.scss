@@ -1,0 +1,47 @@
+.ad {
+	position: relative;
+	display: block;
+	margin: 0 0 $gutter 0;
+	width: 100%;
+
+	text-decoration: none;
+	transition: $tr;
+	cursor: pointer;
+
+	&:last-child {margin: 0 0 0 0;}
+
+
+
+	&:hover {
+		transform: translateX(4px);
+		.ad__img::after{
+			opacity: .2;
+		}
+	}
+}
+
+.ad__offer {
+	background-color: $color_text;
+	color: #fff;
+	@include font-kit(24px, 22px, 20px, 18px, 17px);
+	text-align: center;
+	padding: $gutter/2;
+}
+
+.ad__img {
+	position: relative;
+	width: 100%;
+	height: 208px;
+	@include bg-cover;
+
+	&::after {
+		@include pseudo;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color_main;
+		opacity: 0;
+		transition: $tr;
+	}
+}

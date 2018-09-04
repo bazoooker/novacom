@@ -28,9 +28,13 @@
 }
 
 .location__additional {
-
+	margin: 0 0 30px 0;
 	color: #888888;
 	font-size: 13px;
 	font-style: italic;
 	font-weight: 300;
+
+	&:last-child {
+		margin: 0 0 0 0;
+	}
 }

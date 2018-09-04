@@ -1,0 +1,38 @@
+.count {
+	@include flex-row(nowrap, flex-start, center);
+
+	& > span {
+		font-size: 14px;
+    	color: gray;
+	}
+
+	.nice-select {
+		margin: 0 0 0 $gutter;
+		border: 1px solid #efefef;
+		padding: 0 30px 0 $gutter/2;
+		border-radius: 3px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.count {
+		@include flex-row(nowrap, center, center);
+		flex: 1 1 45%;
+		margin: 0 10px 0 0;
+		
+		padding: 10px;
+		background: #efefef;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.count {
+		flex: 1 1 100%;
+		margin: 0 0 10px 0;
+		background: #e0e0e0;
+
+		& > span {
+			color: gray;
+		}
+	}
+}

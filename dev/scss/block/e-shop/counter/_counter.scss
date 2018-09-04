@@ -1,0 +1,104 @@
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 13rem;
+  flex: 0 0 13rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  height: 3rem;
+  margin-right: 1rem;
+  max-width: 11rem;
+  background-color: #fff;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border: 1px solid #dedede; }
+  .counter .counter-minus {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 3rem;
+    flex: 0 0 3rem;
+    cursor: pointer;
+    -webkit-transition: 250ms;
+    -o-transition: 250ms;
+    transition: 250ms;
+    background-color: #efefef;
+    transition: 250ms; }
+    .counter .counter-minus:hover {
+      background-color: #e65d00; }
+    .counter .counter-minus:hover::after {
+      background-color: #fff; }
+    .counter .counter-minus::after {
+      position: absolute;
+      content: '';
+      left: 1rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 1rem;
+      height: .1rem;
+      background-color: gray;
+      z-index: 2;
+      -webkit-transition: 250ms;
+      -o-transition: 250ms;
+      transition: 250ms; }
+  .counter .counter-plus {
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    cursor: pointer;
+    -webkit-transition: 250ms;
+    -o-transition: 250ms;
+    transition: 250ms;
+    background-color: #efefef;
+    transition: 250ms; }
+    .counter .counter-plus:hover {
+      background-color: #e65d00; }
+    .counter .counter-plus:hover::after, .counter .counter-plus:hover::before {
+      background-color: #fff; }
+    .counter .counter-plus::before {
+      position: absolute;
+      content: '';
+      right: 1.4rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: .1rem;
+      height: 1rem;
+      background-color: gray;
+      z-index: 2;
+      -webkit-transition: 250ms;
+      -o-transition: 250ms;
+      transition: 250ms; }
+    .counter .counter-plus::after {
+      position: absolute;
+      content: '';
+      right: 1rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 1rem;
+      height: .1rem;
+      background-color: gray;
+      z-index: 2;
+      -webkit-transition: 250ms;
+      -o-transition: 250ms;
+      transition: 250ms; }
+  .counter .counter-input-holder {
+    height: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 5rem;
+    flex: 1 1 5rem; }
+    .counter .counter-input-holder input {
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      border: 0; }

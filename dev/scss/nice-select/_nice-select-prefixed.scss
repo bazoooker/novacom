@@ -1,6 +1,6 @@
 // Default variables
-$font_size: 14px !default;
-$font_size_small: 12px !default;
+$font_size: 15px !default;
+$font_size_small: 13px !default;
 
 $input_border_radius: 0px !default;
 $input_height: 38px !default;
@@ -25,7 +25,7 @@ $arrow_color: $gray !default;
   cursor: pointer;
   display: block;
   // float: left;
-  width: 175px;
+  // width: 175px;
   // flex: 0 0 175px;
   font-family: inherit;
   font-size: $font_size;
@@ -33,7 +33,9 @@ $arrow_color: $gray !default;
   // height: $input_height;
   line-height: $input_height - 2;
   outline: none;
-  padding-left: $dropdown_padding;
+  font-weight: 600;
+  // padding-left: $dropdown_padding;
+  padding-left: 0;
   padding-right: $dropdown_padding + 12;
   position: relative;
   text-align: left !important;
@@ -50,15 +52,15 @@ $arrow_color: $gray !default;
     border-color: darken($gray_light, 5%);
   }
   &:active, &:focus {
-    border-color: #28aa8c;
+    border-color: lightgray;
   }
   // Arrow
   &:after { 
-    border-bottom: 2px solid $color_main-b;
-    border-right: 2px solid $color_main-b;
+    border-bottom: 2px solid $color_main;
+    border-right: 2px solid $color_main;
     content: '';
     display: block; 
-    height: 5px;
+    height: 6px;
     margin-top: -4px;
     pointer-events: none;
     position: absolute; 
@@ -73,12 +75,12 @@ $arrow_color: $gray !default;
     -webkit-transition  
 : all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-    width: 5px;
+    width: 6px;
   }
   
   &.open {
     @extend :active;
-    flex: 0 0 175px;
+    // flex: 0 0 175px;
     &:after {
       -webkit-transform: rotate(-135deg);
           -ms-transform: rotate(-135deg);
@@ -107,8 +109,9 @@ $arrow_color: $gray !default;
     display: block;
     /* width: 15rem; */
     overflow: hidden;
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 3.1rem;
+    color: gray;
   }
   
   // Modifiers

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+    <head>
+        <!-- initial -->
+        <meta charset="utf-8" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+        <!-- title -->
+        <title>
+              Нова компоненты
+        </title>
+
+        <!-- meta -->
+        <meta content="Нова компоненты" name="description" />
+        <meta content="Нова компоненты" name="keywords" />
+
+        <!-- styles -->
+        <link href="css/swiper.min.css" rel="stylesheet"/>            
+        <link href="css/main.css" rel="stylesheet"/>        <!-- gulp -->
+        <link href="css/custom.css" rel="stylesheet"/>      <!-- css no preprocessor -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+
+
+
+
+    <body class="page-wrapper">
+            
+        <!-- HEADER BEGIN --> 
+        <header class="page-header">
+
+
+            <div class="page-header__top-bar">
+                <div class="container">
+                    <nav class="nav">
+                        <a class="active" href="#">Главная</a>
+                        <a href="#">О нас</a>
+                        <a href="#">Сертификаты</a>
+                        <a href="#">Новости</a>
+                        <a href="#">Программы лояльности</a>
+                    </nav>
+
+                    <div class="user-options">
+                        <a href="#" class="user-options__cabinet">Личный кабинет</a>
+                        <a href="#" class="user-options__sign-up">Регистрация</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-header__content">
+                <div class="container">
+                    <a href="/" class="logo"></a>
+
+                    <p>Интернет-магазин комплектующих <br/>для тахографии и мониторинга транспорта</p>
+
+
+
+                    <div class="company-info">
+                        <div class="location">
+                                 <select name="city-choice" id="city">
+                                    <option value="Nsk">Новосибирск</option>
+                                    <option value="Brn">Барнаул</option>
+                                </select>
+                                
+                            <div class="location__additional">
+                                ул. Петухова, 51/1
+                                <br/>08:00-17:00, пн-пт
+                            </div>
+                        </div>
+                        <div class="phones">    
+                            <a href="tel:+73852464700" class="phone">
+                                <!-- <span class="phone__city-code">+7(3852)</span> --> 8 (961) 215-12-41
+                            </a>
+                            <a href="#" class="btn btn_call-me callback-link">Перезвоните мне!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page-header__bottom-bar">
+                <div class="container">
+                    <div class="btn-catalog js-show-main-dropdown-menu">
+                        <div class="btn-burger">
+                            <i class="btn-burger__bar"></i>
+                            <i class="btn-burger__bar"></i>
+                            <i class="btn-burger__bar"></i>
+                        </div>
+                        Каталог товаров
+                    </div>
+                    <form action="/catalog/search/">
+                        <div class="search-form">                                            
+                            <input type="text" placeholder="Например, гидроизоляция" id="search-text" name="q">
+                            <input type="submit" id="search-submit" value="">
+                        </div>
+                    </form>
+
+                    <a href="#" class="basket">
+                        <div class="basket__inner">
+                            <div class="basket__goods-quantity">7</div>
+                            
+                            <!-- Серега -->
+                            <!-- если корзина пуста - выводить "корзина"-->
+                                <span class="basket__price">Корзина</span>
+
+                            <!-- Если в корзине есть товары - выводить суммарную цену-->
+                                <span class="basket__price">12 850р.</span>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+
+                <div class="catalog-list catalog-list_dropdown-menu">
+
+                    <div class="container">
+                        <div class="section-margin">
+                            <div class="row">
+                                <div class="col-3">
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Абонентские терминалы
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-2.png);"></div>
+                                        GPS/GSM Антенны
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-3.png);"></div>
+                                        Датчики уровня топлива
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-4.png);"></div>
+                                        Тахографы
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Короба для тахографов
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Блоки НКМ
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-2.png);"></div>
+                                        Спидометры
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-3.png);"></div>
+                                        Датчики скорости
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-4.png);"></div>
+                                        Штуцеры и переходники
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Термобумага
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Для печати наклеек
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-2.png);"></div>
+                                        Разъемы, контакты
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-3.png);"></div>
+                                        Гильзы соединительные/Наконечники
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-4.png);"></div>
+                                        Картридеры
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Кабели, жгуты
+                                    </a>
+                                </div>
+                                <div class="col-3">
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-1.png);"></div>
+                                        Инструменты
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-2.png);"></div>
+                                        Изоляционные материалы
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-3.png);"></div>
+                                        Пломбировочные материалы
+                                    </a>
+                                    <a href="" class="catalog-link">
+                                        <div class="catalog-link__icon" style="background-image: url(/img/icons/goods-4.png);"></div>
+                                        Предохранители
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="text-center">
+                            <a href="#" class="btn btn_size-s btn_outline">Весь каталог</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="progress"></div>
+        </header>
+        <!-- HEADER END --> 
+
+
+
+
+        <!-- PAGE CONTENT BEGIN -->            
+        <main class="page-content" role="main">
+
+            <div class="container">
+                <h1>Спидометр АВУР 140мм</h1>
+
+                <div class="product-list-controls">
+                    <div class="breadcrumbs">
+                        <a href="/catalog/vibroplity/" class="breadcrumbs__item">Главная</a>
+                        <a href="/catalog/vibroplity/" class="breadcrumbs__item">Каталог</a>
+                        <a href="/catalog/vibroplity/" class="breadcrumbs__item">Спидометры</a>
+                        <a href="/catalog/vibroplity/" class="breadcrumbs__item">Спидометр АВУР 140мм</a>
+                    </div>
+                    
+                    <!-- ================== 
+                    не удалять, может пригодиться 
+                    =====================-->
+                    
+                    <!-- кол-во элементов для показа на стр -->
+
+                    <!-- <div class="count">
+                    <span>Показывать по:</span>
+                        <select name="count" onchange="count_elment_e1('count',this.value)" style="display: none;">
+                            <option selected="selected" value="10">10</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select><div class="nice-select" tabindex="0"><span class="current">10</span><ul class="list"><li data-value="10" class="option selected">10</li><li data-value="50" class="option">50</li><li data-value="100" class="option">100</li></ul></div>
+                    </div>
+                    -->
+                    
+                    <!--вид отображения элементов: плитка,список-->
+
+                    <!--<div class="view">
+                        <span>Вид:</span> 
+                        <div class="view__btn-group">
+                            <a title="Списком" class=" view-list" href="/include/settype.php?type=list"></a> 
+                            <a title="Плиткой" class="active view-image" href="/include/settype.php?type=.default"></a>
+                        </div>
+                    </div> -->
+
+                    <!-- ================== 
+                    не удалять, может пригодиться 
+                    =====================-->
+
+                    <div class="sort">
+                        <span>Сортировать:</span>
+                        <a href="/include/setSort.php?dir=name" class="active">по алфавиту</a>
+                        <a href="/include/setSort.php?dir=price" class="">по цене</a>
+                        <!-- <a href="/include/setSort.php?dir=CATALOG_QUANTITY" class="">по наличию</a> -->
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+<div class="product-detail">
+
+    <div class="product-detail__left">
+        <div class="product-detail__img" style="background-image: url(/img/bg/bg-product-detail.jpg);"></div>
+    </div>    
+
+    <div class="product-detail__right">
+
+        <div class="product-detail-heading">
+
+            <div class="product-detail-heading__main-info">
+                <div class="product-detail-heading__artic">Артикул: <span>454545</span></div>
+                <div class="product-detail-heading__price">
+                    4590 руб.
+                </div>
+
+                <div class="product-detail-heading__controls">
+                    <div class="btn-group btn-group_cart-counter">
+                        <div class="counter">
+                            <a class="counter-control counter-minus">
+                                <div class="control-option"></div>
+                            </a>
+                            <div class="counter-input-holder">
+                            <input readonly="" prodyct_id="<?=$arResult['ID']?>"  ids="" ratio="1" float="true"  type="text" size="3"  name="" maxlength="18" class="counter-input" value="">                                                          
+                            </div>
+                            <a class="counter-control counter-plus">
+                                <div class="control-option"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn_add-to-cart">в корзину</a>
+                </div>
+            </div>                                     
+
+            <div class="product-detail-heading__logo" >
+                <div class="product-logo" style="background-image: url(/img/icons/brands/makita.jpg);"></div>
+            </div>
+
+        </div>
+
+        <div class="product-detail__text">
+            <p>Бензиновый генератор Makita EG 241 A - аппарат, предназначенный для питания бытовой техники и электроинструмента. Разработан для эксплуатации в тяжелых условиях. Мощный четырехтактный бензиновый двигатель Robin Subaru отличается высокой производительностью и надежностью.</p>
+
+            <p>
+               Высокая мощность делает возможным подключение одновременно нескольких электроинструментов. Аппарат оснащен большим баком для продолжительного рабочего цикла без дозаправки. Воздушно охлаждение обеспечивает стабильную работу генератора и защиту от перегрева. 
+            </p>
+        </div>
+        <div class="product-detail__table">
+            <table>
+                <tr>
+                    <td>Тип электростанции</td>
+                    <td>бензиновая</td>
+                </tr>
+                <tr>
+                    <td>Тип запуска</td>
+                    <td>ручной</td>
+                </tr>
+                <tr>
+                    <td>Число фаз</td>
+                    <td>1(220 вольт)</td>
+                </tr>
+                <tr>
+                    <td>Двигатель</td>
+                    <td>Robin Subaru EX17D</td>
+                </tr>
+                <tr>
+                    <td>Объем двигателя</td>
+                    <td>169 куб.см</td>
+                </tr>
+                <tr>
+                    <td>Число цилиндров</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Число тактов</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Тип охлаждения</td>
+                    <td>Воздушное</td>
+                </tr>
+                <tr>
+                    <td>Марка бензина</td>
+                    <td>АИ-92</td>
+                </tr>
+                <tr>
+                    <td>Объем бака</td>
+                    <td>12.8 л</td>
+                </tr>
+            </table>
+        </div>
+
+    </div> 
+
+</div>
+
+
+
+
+
+
+            </div>
+
+
+        
+
+
+            
+
+
+
+                        
+        </main>
+        <!-- PAGE CONTENT END --> 
+        
+
+
+
+
+        <!-- FOOTER BEGIN -->
+        <footer class="page-footer">
+            <div class="container">
+                    <a href="/" class="logo"></a>
+
+                    <p>Интернет-магазин комплектующих <br/>для тахографии и мониторинга транспорта
+                    </p>
+
+                    <div class="company-info">
+                        <div class="location">
+                            <div class="location__city">
+                                Новосибирск
+                            </div>
+                            <div class="location__additional">
+                                ул. Петухова, 51/1
+                                <br/>08:00-17:00, пн-пт
+                            </div>
+ 
+                            <div class="location__city">
+                                Барнаул
+                            </div>
+                            <div class="location__additional">
+                                ул. Гридасова, 24
+                                <br/>08:00-17:00, пн-пт
+                            </div>
+                        </div>
+                        <div class="phones">    
+                            <a href="tel:+73852464700" class="phone">
+                                <!-- <span class="phone__city-code">+7(3852)</span> --> 8 (961) 215-12-41
+                            </a>
+                            <a href="#" class="btn btn_call-me callback-link">Перезвоните мне!</a>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="made-by text-center">
+                Разработка сайта - <a class="e1media-link" href="http://e1media.ru/">e1media</a>
+            </div>
+            
+        </footer>
+        <!-- FOOTER END -->
+
+
+
+
+
+
+        <!-- MOBILE SLIDE-IN MENU BEGIN-->
+        <div class="menu">
+            
+        </div>
+        <div class="overlay js-overlay"></div>
+        <!-- MOBILE SLIDE-IN MENU END-->
+
+
+            
+
+
+        <!-- MODAL WINDOW BEGIN -->
+        <div class="modal" id="callback-window" style="display: none;">
+            <a class="modal-close" href="#">
+            </a>
+            <div class="spinner">
+            </div>
+            <div class="modal-content">
+                <h2>
+                    Позвоним в течение 10 минут
+                </h2>
+                <div class="">
+                    <form action="" data-file="callback" method="post">
+                        <input autofocus="" name="name" placeholder="Ваше имя *" type="text">
+                            <input name="phone" placeholder="Номер телефона *" type="text">
+                                <textarea name="text" placeholder="Здесь вы можете оставить комментарий">
+                                </textarea>
+                                <div class="modal-controls">
+                                    <button class="btn btn_gradient btn_x-small" type="submit">
+                                        Отправить
+                                    </button>
+                                </div>
+                                <div class="modal-errors">
+                                </div>
+                                <div class="modal-result">
+                                </div>
+                            </input>
+                        </input>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-content-copy">
+            </div>
+        </div>
+        <!-- MODAL WINDOW END -->
+
+
+
+
+        
+        <!-- SCROLL-TO-TOP BEGIN -->
+        <div class="to-top js-scroll-to-top">
+            <span class="to-top__text">Наверх</span>
+        </div>
+        <!-- SCROLL-TO-TOP END -->
+        
+          
+
+
+
+        <!-- scripts -->
+
+        <script src="/js/modernizr.custom.62035.js" type="text/javascript"></script>
+        <script src="/js/swiper.min.js"></script>
+        <script src="/js/wow.min.js"></script>
+        <script src="/js/jquery.nice-select.min.js"></script>
+        <script src="/js/script.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+.filter-category {
+	margin: 0 0 $gutter 0;
+
+	&:last-child {margin: 0 0 0 0;}
+}
+
+.filter-category__name {
+
+	position: relative;
+	padding: 0 12px 12px 0;
+	margin: 0 0 12px 0;
+
+	font-size: 1.5rem;
+	font-weight: 600;
+	cursor: pointer;
+	color: $color_text;
+
+	&::after {
+		@include pseudo;
+		right: 5px;
+	    top: 3px;
+	    width: 7px;
+	    height: 7px;
+	    border: solid gray;
+	    border-width: 0 1px 1px 0;
+	    -webkit-transform: rotate(45deg) translateX(-50%) translateY(-50%);
+	    -ms-transform: rotate(45deg) translateX(-50%) translateY(-50%);
+	    transform: rotate(45deg) translateX(-50%);
+	    transform-origin: center;
+	    transition: $tr;
+	}
+
+	&:hover {
+		color: $color_main;
+	}
+	&:hover::after {
+		border-color: $color_main;
+	}
+}
+.filter-category__content {
+	@include flex-row(wrap, space-between, flex-start);
+
+}
+
+
+.filter-category_opened {
+
+	.filter-category__name::after {
+		transform:  translateX(-35%) translateY(0%) rotate(-135deg);
+	}
+}
